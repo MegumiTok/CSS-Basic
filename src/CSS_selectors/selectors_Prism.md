@@ -37,6 +37,8 @@
 詳しくはこちらの公式ページを参考[Normalize Whitespace](https://prismjs.com/plugins/normalize-whitespace/)<br>
 簡単にいうと、ノーマルだと、
 例えば以下のように書いた時、１行目に改行が入ってしまう。なのでわざわざ１行目を`<code>`タグの直後に改行せずくっつけなければいけない(見た目が悪い)。だがscriptを書き足すことによって、それを解決できる。<br>
+
+▼この書き方は`normalize-whitespace`のスクリプトがないと１行目に改行が入ってしまう。
 ```html
  <pre class="line-numbers"><code class="language-html">
             &lt;h1&gt;ここから離れたところに適用させる&lt;/h1&gt;
@@ -47,5 +49,6 @@
         </code></pre>
 ```
 
+▼ スクリプト<br>
 [normalize-whitespace](https://unpkg.com/browse/prismjs@1.6.0/plugins/normalize-whitespace/)
 
