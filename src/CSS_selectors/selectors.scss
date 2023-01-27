@@ -1,0 +1,228 @@
+// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+$breakpoint-alpha: 480px; // adjust to your needs
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    line-height: 1.42em;
+    font-family: Montserrat, sans-serif;
+}
+
+
+/*テーブル==========================*/
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    white-space: break-spaces;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: center;
+    color: #34495E;
+    letter-spacing: -1px;
+}
+
+
+.table {
+    margin: 1em 0;
+    margin-bottom: 3em;
+    min-width: 300px;
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+    border-color: grey;
+
+    tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+    }
+
+    td {
+        display: block;
+
+        &:first-child {
+            padding-top: .5em;
+        }
+
+        &:last-child {
+            padding-bottom: .5em;
+        }
+
+        &:before {
+            content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+            font-weight: bold;
+
+            // optional stuff to make it look nicer
+            width: 6.5em; // magic number :( adjust according to your own content
+            display: inline-block;
+            // end options
+
+            @media (min-width: $breakpoint-alpha) {
+                display: none;
+            }
+        }
+    }
+
+    th,
+    td {
+        text-align: left;
+
+        @media (min-width: $breakpoint-alpha) {
+            display: table-cell;
+            padding: .25em .5em;
+            padding: 1em !important;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        margin: .5em 1em;
+
+        @media (min-width: $breakpoint-alpha) {
+            padding: 1em !important;
+        }
+
+    }
+
+    th,
+    td:before {
+        color: #dd5;
+    }
+
+
+}
+
+/************************************
+** 本文部分
+************************************/
+
+.column-wrap {
+//     display: flex;
+//     background-color: #23e4b7;
+
+// justify-content: space-between;
+position: relative;
+}
+
+
+
+.box h2 {
+    background: #f7f7f7;
+    border-left: solid #f89174 5px;
+    padding: 14px 12px;
+    // border-bottom: solid 3px #dadada;
+    clear: both;
+}
+
+.box p {
+    margin: 1em 0;
+}
+
+.box pre::before {
+    content: 'HTML';
+    background-color: #e44b23;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    display: block;
+    padding: 3px 13px 0;
+    font-size: 16px;
+}
+
+pre .code {
+    padding: 40px 12px 12px;
+    position: relative;
+}
+
+// 改良必要
+.box #pre-css::before {
+    content: 'CSS';
+    position: relative;
+    background-color: #23e4b7;
+    top: -15px;
+    right: -930px;
+}
+
+
+.example>p {
+    color: orange;
+}
+
+.example_1 {
+
+    .sample-1,
+    .sample-2 {
+        color: orange;
+    }
+}
+
+.example_2 {
+    p span {
+        color: orange;
+    }
+}
+
+.example_3 {
+    div p span {
+        color: orange;
+    }
+}
+
+.example-4{
+    h1 + p {
+        color: orange;
+      }
+}
+
+.example-5{
+    h1 ~ p {
+        color: orange;
+      }
+}
+.result {
+    margin: 2rem 0;
+    padding: 0 1em 1em 1em;
+    // background: #fdf9f2;
+    border-radius: 0 0 10px 10px;
+    // border: 2px solid #34495E;
+    box-shadow: 0 2px 6px rgb(19 19 19 / 15%), 0 -2px 4px rgb(19 19 19 / 15%);
+}
+
+.result>p {
+    margin: -1em;
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    background: linear-gradient(45deg, #ff6b6b 0%, #ffa667 100%);
+    color: white;
+}

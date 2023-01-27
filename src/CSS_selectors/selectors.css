@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.42em;
+  font-family: Montserrat, sans-serif;
+}
+
+/*テーブル==========================*/
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #34495E;
+  letter-spacing: -1px;
+}
+
+.table {
+  margin: 1em 0;
+  margin-bottom: 3em;
+  min-width: 300px;
+  background: #34495E;
+  color: #fff;
+  border-radius: 0.4em;
+  overflow: hidden;
+  border-color: grey;
+}
+.table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.table th {
+  display: none;
+}
+.table td {
+  display: block;
+}
+.table td:first-child {
+  padding-top: 0.5em;
+}
+.table td:last-child {
+  padding-bottom: 0.5em;
+}
+.table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+@media (min-width: 480px) {
+  .table td:before {
+    display: none;
+  }
+}
+.table th,
+.table td {
+  text-align: left;
+  margin: 0.5em 1em;
+}
+@media (min-width: 480px) {
+  .table th,
+.table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+    padding: 1em !important;
+  }
+  .table th:first-child,
+.table td:first-child {
+    padding-left: 0;
+  }
+  .table th:last-child,
+.table td:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 480px) {
+  .table th,
+.table td {
+    padding: 1em !important;
+  }
+}
+.table th,
+.table td:before {
+  color: #dd5;
+}
+
+/************************************
+** 本文部分
+************************************/
+.column-wrap {
+  position: relative;
+}
+
+.box h2 {
+  background: #f7f7f7;
+  border-left: solid #f89174 5px;
+  padding: 14px 12px;
+  clear: both;
+}
+
+.box p {
+  margin: 1em 0;
+}
+
+.box pre::before {
+  content: "HTML";
+  background-color: #e44b23;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  display: block;
+  padding: 3px 13px 0;
+  font-size: 16px;
+}
+
+pre .code {
+  padding: 40px 12px 12px;
+  position: relative;
+}
+
+.box #pre-css::before {
+  content: "CSS";
+  position: relative;
+  background-color: #23e4b7;
+  top: -15px;
+  right: -930px;
+}
+
+.example > p {
+  color: orange;
+}
+
+.example_1 .sample-1,
+.example_1 .sample-2 {
+  color: orange;
+}
+
+.example_2 p span {
+  color: orange;
+}
+
+.example_3 div p span {
+  color: orange;
+}
+
+.example-4 h1 + p {
+  color: orange;
+}
+
+.example-5 h1 ~ p {
+  color: orange;
+}
+
+.result {
+  margin: 2rem 0;
+  padding: 0 1em 1em 1em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 6px rgba(19, 19, 19, 0.15), 0 -2px 4px rgba(19, 19, 19, 0.15);
+}
+
+.result > p {
+  margin: -1em;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  background: linear-gradient(45deg, #ff6b6b 0%, #ffa667 100%);
+  color: white;
+}/*# sourceMappingURL=selectors.css.map */

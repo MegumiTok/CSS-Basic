@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="selectors.css">
+    <link rel="stylesheet" href="../prism.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>CSS selectors</h1>
+        <table class="table">
+            <tr>
+                <th>Combinators</th>
+                <th>Example</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td data-th="Syntax">A, B</td>
+                <td data-th="Example"><code>div, span</code> will match both <code>span</code> and <code>div</code>
+                    elements.</td>
+                <td data-th="">The <code>,</code> selector is a grouping method that selects all the matching nodes.
+                </td>
+
+            </tr>
+            <tr>
+                <td data-th="Syntax">A B</td>
+                <td data-th="Example"> div span will match all<code>span</code> elements that are inside a
+                    <code>div</code>
+                    element.
+                </td>
+                <td data-th="">「〇〇要素の子である△△要素」と限定する書き方</td>
+
+            </tr>
+            <tr>
+                <td data-th="Syntax">A > B</td>
+                <td data-th="Example"> ul > li will match all <code>li</code>elements that are nested directly inside a
+                    <code>ul</code> element.
+                </td>
+                <td data-th="">直下の子要素にだけ適応させる</td>
+
+            </tr>
+
+            <tr>
+                <td data-th="Syntax">A + B</td>
+                <td data-th="Example"></td>
+                <td data-th="">お隣さんにだけ適応させる</td>
+
+            </tr>
+            <tr>
+                <td data-th="Syntax">A ~ B</td>
+                <td data-th="Example"></td>
+                <td data-th="">「+」は隣接する要素限定に作用するが、「~」は隣、または離れた要素を指定でき、指定した全てに対して適用。</td>
+
+            </tr>
+        </table>
+
+        <!-- 説明欄 ==============================-->
+
+        <!-- A, B -->
+        <div class="box">
+            <h2>A, B</h2>
+            <p>AとB両方にスタイルを適用する書き方</p>
+
+            <div class="column-wrap">
+            <pre class="line-numbers pre-html code"><code class="language-html">
+                &lt;p class=&quot;sample-1&quot;&gt;スタイル適用&lt;/p&gt;
+                &lt;p class=&quot;sample-2&quot;&gt;スタイル適用&lt;/p&gt;
+        </code></pre>
+
+
+            <pre id="pre-css"><code class="language-css">
+                .sample-1,.sample-2 {
+                    color: orange;
+                  }
+        </code></pre>
+
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example_1">
+                    <p class="sample-1">スタイル適用</p>
+                    <p class="sample-2">スタイル適用</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- A B ======================-->
+        <div class="box">
+            <h2>A B</h2>
+            <p>「〇〇要素の子である△△要素」と限定する書き方</p>
+            <p>ちなみに、SCSSで書くと視覚的にわかりやすい。入れ子にするだけ。複雑になったときに便利。</p>
+
+            <h3>例1:</h3>
+            <pre class="line-numbers code"><code class="language-html">
+                &lt;p&gt;&lt;span&gt;こっちだけ適用&lt;/span&gt;&lt;/p&gt;
+ 
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;こっちは適用されない&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+                p span {
+                    color: red;
+                }
+        </code></pre>
+
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example_2">
+                    <p><span>ここはデザイン反映されるよ</span></p>
+
+                    <ul>
+                        <li>
+                            <span>ここはデザイン反映されないよ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <h3>例2:</h3>
+            <p>この子要素指定はいくらでも連続して記述することができる。</p>
+            <pre class="line-numbers"><code class="language-html">
+                &lt;div&gt;&lt;p&gt;&lt;span&gt;こっちだけ適用&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+                &lt;p&gt;&lt;span&gt;こっちは適用されない&lt;/span&gt;&lt;/p&gt; 
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+                div p span {
+                    color: red;
+                }
+        </code></pre>
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example_3">
+                    <div>
+                        <p><span>こっちだけ適用</span></p>
+                    </div>
+                    <p><span>こっちは適用されない</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- A > B =========================-->
+        <div class="box">
+            <h2>A > B</h2>
+            <p>直下の子要素にだけ適応させる</p>
+            <pre class="line-numbers"><code class="language-html">
+            &lt;div class=&quot;example&quot;&gt;
+            &lt;p&gt;こっちだけ適用&lt;/p&gt;
+            &lt;div&gt;   
+              &lt;p&gt;こっちは適用されない&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+            .example > p {
+                color: orange;
+              }
+        </code></pre>
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example">
+                    <p>こっちだけ適用</p>
+                    <div>
+                        <p>こっちは適用されない</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- A + B ===========================================-->
+        <div class="box">
+            <h2>A + B</h2>
+            <p>お隣さんにだけ適応させる</p>
+
+            <div class="column-wrap">
+            <pre class="line-numbers"><code class="language-html">
+                &lt;h1&gt;これのお隣さんにだけ適応させる&lt;/h1&gt;
+                &lt;p&gt;ここだけ適用&lt;/p&gt;
+                &lt;p&gt;ここは適用されない&lt;/p&gt;
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+            h1 + p {
+                color: orange;
+              }
+        </code></pre>
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example-4">
+                    <h1>これのお隣さんにだけ適応させる</h1>
+                    <p>ここだけ適用</p>
+                    <p>ここは適用されない</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>A ~ B</h2>
+        <p>「+」は隣接する要素限定に作用するが、「~」は隣、または離れた要素を指定でき、指定した全てに対して適用。</p>
+        <pre class="line-numbers"><code class="language-html">
+            &lt;h1&gt;ここから離れたところに適用させる&lt;/h1&gt;
+                &lt;h2&gt;ここは適用なし&lt;/h2&gt;
+                &lt;p&gt;ここに適用!!&lt;/p&gt;
+                &lt;h3&gt;ここは適用なし&lt;/h3&gt;
+                &lt;p&gt;ここにも適用!!&lt;/p&gt;
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+            h1 ~ p {
+                color: orange;
+              }
+        </code></pre>
+
+        <div class="result">
+            <p>▼結果</p>
+            <div class="example-5">
+                <h1>ここから離れたところに適用させる</h1>
+                <h2>ここは適用なし</h2>
+                <p>ここに適用!!</p>
+                <h3>ここは適用なし</h3>
+                <p>ここにも適用!!</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="../prism.js"></script>
+    <script src="../prism-normalize-whitespace.js"></script>
+    <script type="text/javascript">
+        // Optional
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+        });
+    </script>
+</body>
+
+</html>
