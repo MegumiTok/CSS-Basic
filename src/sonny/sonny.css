@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Some basic defaults */
 html {
   box-sizing: content-box;
 }
@@ -9,6 +8,7 @@ body {
   width: 100%;
   margin-top: 80px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 li {
@@ -58,7 +58,9 @@ h1 {
   line-height: 1.4;
 }
 
-/* 横線 =================*/
+/************************************
+** 横線
+************************************/
 .historyList > li h2::before {
   content: "";
   background-color: #656565;
@@ -87,12 +89,12 @@ h1 {
   position: relative;
 }
 
-.historyList > li dl {
+li dl {
   margin-top: 35px;
   transition: 0.2s ease-in-out;
 }
 
-.historyList > li dl dt {
+li dl dt {
   font-size: 162.5%;
   font-size: 156.2%;
   line-height: 1.2;
@@ -100,7 +102,7 @@ h1 {
   border-bottom: 2px solid #4c4948;
 }
 
-.historyList > li dl dd {
+li dl dd {
   line-height: 1.5;
   margin-top: 10px;
 }
@@ -111,27 +113,31 @@ figure {
   text-align: center;
 }
 
-.historyList > li#year1950,
-.historyList > li#year1958 {
-  margin-top: 300px;
+li#year1950,
+li#year1958 {
+  margin-top: 500px;
 }
 
-/* reverseRightSide =================*/
-.historyList > li.reverseRightSide {
+/************************************
+** reverseRightSide
+************************************/
+li.reverseRightSide {
   float: right;
   padding-right: 0;
   padding-left: 100px;
 }
 
-.historyList > li.reverseRightSide h2::before {
+li.reverseRightSide h2::before {
   right: auto;
   left: -100px;
 }
-.historyList > li.reverseRightSide h2 {
+li.reverseRightSide h2 {
   text-align: left;
 }
 
-/* 縦線 =================*/
+/************************************
+** 縦線
+************************************/
 .historyList::before {
   content: "";
   background-color: #656565;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>selectors</title>
     <link rel="stylesheet" href="selectors.css">
     <link rel="stylesheet" href="../prism.css">
 </head>
@@ -35,6 +35,13 @@
                     element.
                 </td>
                 <td data-th="">「〇〇要素の子である△△要素」と限定する書き方</td>
+
+            </tr>
+
+            <tr>
+                <td data-th="Syntax">A.B</td>
+                <td data-th="Example"> p.sample</td>
+                <td data-th="">p要素の中でclass属性の値が「sample」となっている要素だけにスタイルが適用される。</td>
 
             </tr>
             <tr>
@@ -153,6 +160,29 @@
             </div>
         </div>
 
+           <!-- A.B =========================-->
+           <div class="box">
+            <h2>A.B</h2>
+         
+            <pre class="line-numbers"><code class="language-html">
+                &lt;p class=&quot;sample&quot;&gt;こっちだけ適用&lt;/p&gt;                   
+                &lt;p&gt;こっちは適用されない&lt;/p&gt;     
+        </code></pre>
+
+        <pre id="pre-css"><code class="language-css">
+            p.sample{
+                color: orange;
+              }
+        </code></pre>
+
+            <div class="result">
+                <p>▼結果</p>
+                <div class="example-6">
+                    <p class="sample">こっちだけ適用</p>                   
+                    <p>こっちは適用されない</p>               
+                </div>
+            </div>
+        </div>
 
         <!-- A > B =========================-->
         <div class="box">

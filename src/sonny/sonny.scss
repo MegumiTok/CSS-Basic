@@ -1,47 +1,46 @@
-/* Some basic defaults */
-html{
+html {
   box-sizing: content-box;
 }
 
 body {
-    font-family: sans-serif;
-    width: 100%;
-    margin-top: 80px;
-    margin-bottom: 30px;
+  font-family: sans-serif;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  background-color: white;
 
 }
 
-// .container{
-// display: flex;
-// }
-  li {
-    list-style: none;
-  }
-
-  .historyList {
-    width: 950px;
-    padding: 10px 0;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 45px;
-    position: relative;
-
-  }
-
-
-  .historyList > li {
-    float: left;
-    margin-top: 180px;
-    padding-right: 100px;
-    position: relative;
-    width: 50%;
-    width: 475px;
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+li {
+  list-style: none;
 }
+
+.historyList {
+  width: 950px;
+  padding: 10px 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 45px;
+  position: relative;
+
+}
+
+
+.historyList>li {
+  float: left;
+  margin-top: 180px;
+  padding-right: 100px;
+  position: relative;
+  width: 50%;
+  width: 475px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   vertical-align: top;
   font-size: 0;
@@ -49,128 +48,131 @@ img {
   max-width: 100%;
   height: auto;
 }
-  
-  h1 {
-    text-align: center;
-    line-height: 1.2;
-    margin-bottom: 28px;
-    position: relative;
 
-    margin-bottom: 1.5rem;
-font-weight: bold;
-font-size: 1.9rem;
-line-height: 1.4;
-  }
-  
-  /* 横線 =================*/
-  .historyList > li h2::before {
-    content: '';
-    background-color: #656565;
-    display: block;
-    height: 1px;
-    width: 100px;
-    position: absolute;
-    right: -100px;
-    top: 50%;
-  }
-  
+h1 {
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 28px;
+  position: relative;
 
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
 
-  // .historyList:nth-of-type(odd) {
-  //   justify-content: flex-end;
-  // }
-  
-  // .historyList:nth-of-type(even) {
-  //   justify-content: flex-start;
-  // }
+/************************************
+** 横線
+************************************/
 
-  
-  .historyList > li {
-    float: left;
-    margin-top: 180px;
-    padding-right: 100px;
-    position: relative;
-    width: 50%;
-    width: 475px;
-  }
-
-  .historyList > li h2 {
-    font-weight: normal;
-    font-size: 362.5%;
-    line-height: 1;
-    text-align: right;
-    position: relative;
-  }
-
-  
-  .historyList > li dl {
-    margin-top: 35px;
-    transition: 0.2s ease-in-out;
-  }
+.historyList>li h2::before {
+  content: '';
+  background-color: #656565;
+  display: block;
+  height: 1px;
+  width: 100px;
+  position: absolute;
+  right: -100px;
+  top: 50%;
+}
 
 
-  .historyList > li dl dt {
-    font-size: 162.5%;
-    font-size: 156.2%;
-    line-height: 1.2;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #4c4948;
-  }
 
-  .historyList > li dl dd {
-    line-height: 1.5;
-    margin-top: 10px;
-  }
+// .historyList:nth-of-type(odd) {
+//   justify-content: flex-end;
+// }
 
-  figure {
-    margin-top: 40px;
-    position: relative;
-    text-align: center;
-  }
+// .historyList:nth-of-type(even) {
+//   justify-content: flex-start;
+// }
 
 
-  .historyList > li#year1950,
-  .historyList > li#year1958
-  {
-    margin-top: 300px;
-  }
+.historyList>li {
+  float: left;
+  margin-top: 180px;
+  padding-right: 100px;
+  position: relative;
+  width: 50%;
+  width: 475px;
+}
+
+.historyList>li h2 {
+  font-weight: normal;
+  font-size: 362.5%;
+  line-height: 1;
+  text-align: right;
+  position: relative;
+}
 
 
-/* reverseRightSide =================*/
+li dl {
+  margin-top: 35px;
+  transition: 0.2s ease-in-out;
+}
 
-.historyList > li.reverseRightSide {
+
+li dl dt {
+  font-size: 162.5%;
+  font-size: 156.2%;
+  line-height: 1.2;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4c4948;
+}
+
+li dl dd {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+figure {
+  margin-top: 40px;
+  position: relative;
+  text-align: center;
+}
+
+
+li#year1950,
+li#year1958 {
+  margin-top: 500px;
+}
+
+/************************************
+** reverseRightSide
+************************************/
+li.reverseRightSide {
   float: right;
   padding-right: 0;
   padding-left: 100px;
 }
 
-  .historyList > li.reverseRightSide
-  {
-    h2::before {
-      right: auto;
-      left: -100px;
-    }
-
-    h2 {
-      text-align: left;
-    }
-  }
-  
-  /* 縦線 =================*/
-  .historyList::before {
-    content: '';
-    background-color: #656565;
-    display: block;
-    height: 100%;
-    width: 1px;
-    position: absolute;
-    left: 50%;
-    top: 0px;
+li.reverseRightSide {
+  h2::before {
+    right: auto;
+    left: -100px;
   }
 
-  .historyList:after
- {
-	content: "";
-	display: block;
-	clear: both;
+  h2 {
+    text-align: left;
+  }
+}
+
+/************************************
+** 縦線
+************************************/
+
+.historyList::before {
+  content: '';
+  background-color: #656565;
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+}
+
+.historyList:after {
+  content: "";
+  display: block;
+  clear: both;
 }
