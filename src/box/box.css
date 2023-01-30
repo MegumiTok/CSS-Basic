@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  color: white;
+  background-color: #f4b9b2;
+}
+
+*::selection {
+  color: white;
+  background-color: #f4b9b2;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/************************************
+** 1個目
+************************************/
+.container_one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vh;
+  height: 50vh;
+  font-family: "Fredoka", sans-serif;
+}
+
+.window {
+  width: 30vw;
+  background-color: #fbf8cc;
+  position: relative;
+  display: inline-block;
+}
+
+.window:after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  background-color: #ffc8dd;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header {
+  height: 50px;
+  border: 3px solid;
+  border-radius: 5px 5px 0 0;
+  border-bottom-width: 0;
+  display: flex;
+}
+
+.dot {
+  height: 1.3em;
+  aspect-ratio: 1/1;
+  background-color: #cfbaf0;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 7px;
+  align-self: center;
+}
+
+.dot:hover {
+  height: 1.4em;
+  aspect-ratio: 1/1;
+  margin-left: 5px;
+}
+
+.dot-one {
+  background-color: #a3c4f3;
+}
+
+.dot-two {
+  background-color: #84dcc6;
+}
+
+.dot-three {
+  background-color: #ff5d8f;
+}
+
+.box {
+  height: auto;
+  border: 3px solid;
+  border-radius: 0 0 5px 5px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+.title span {
+  color: #bdb2ff;
+}
+
+.text {
+  margin: 20px;
+  text-align: justify;
+  font-size: 1.2em;
+}/*# sourceMappingURL=box.css.map */

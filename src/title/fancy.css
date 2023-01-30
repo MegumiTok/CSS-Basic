@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  font-family: "Marmelad", sans-serif;
+}
+
+body > h1 {
+  padding: 1em 0 0 1em;
+}
+
+.container {
+  width: 900px;
+  margin: 2em auto;
+  border-radius: 10px;
+}
+
+/************************************
+** 1個目
+************************************/
+.container_one {
+  background: #f1faee;
+}
+.container_one h1 {
+  position: relative;
+  font-size: 3.5rem;
+  margin: 0.5em 0;
+}
+.container_one .shadow {
+  text-shadow: 3px 4px 0 #b66ee8;
+}
+.container_one .title {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container_one .under::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  background-color: #ffc8dd;
+  width: 110%;
+  height: 35%;
+  z-index: -1;
+}
+
+/************************************
+** 2個目
+************************************/
+.container_two {
+  font-family: "Pacifico", cursive;
+  background-color: #ffc8dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_two p {
+  padding: 0.5em;
+  align-self: center;
+  font-size: 75px;
+  font-weight: 800;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: url("https://i.pinimg.com/originals/07/f7/27/07f72772fee4f51adcf8f9aa9fa1a8e0.gif");
+}
+
+/************************************
+** 3個目
+************************************/
+.container_three {
+  font-family: "VT323", monospace;
+  background: #e2b1b1;
+  width: 100vw;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_three p {
+  color: white;
+  font-size: 3.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 5px 5px 10px rgba(234, 124, 181, 0.9);
+  border-right: 0.15em solid #fff;
+  margin: auto;
+  -webkit-animation: typing 4s steps(30, end), blink 0.9s step-end infinite;
+          animation: typing 4s steps(30, end), blink 0.9s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@-webkit-keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+/************************************
+** 4個目
+************************************//*# sourceMappingURL=fancy.css.map */
