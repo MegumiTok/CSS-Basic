@@ -15,3 +15,7 @@ sonnyのホームページの再現
 
 
 ![sonny](./assets/sonny.html.png)
+
+# relative vs absolute
+
+![position](./assets/position.png)
