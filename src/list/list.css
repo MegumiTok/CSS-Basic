@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.container-one {
+  letter-spacing: 0.02em;
+  font-family: "Marmelad", sans-serif;
+  font-weight: bold !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+}
+
+.box {
+  border: 1px solid #eee;
+  padding: 1em;
+  background-image: url(https://websae.net/wp-content/themes/nominal/images/pattern13.png);
+  padding: 1em 10em 2em 1em;
+}
+.box p {
+  width: 4em;
+  text-align: center;
+  background: #76C2AF;
+  border-radius: 4px;
+  padding: 0.25em 0.125em;
+  color: #fff;
+  border: 2px solid #578f81;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.box ul {
+  margin: 0 0 1.5em 10px;
+  list-style-type: none;
+}
+.box li {
+  display: flex;
+  align-items: center;
+}
+.box a {
+  color: #3b5998;
+}
+.box a:hover {
+  color: #ffa600;
+}/*# sourceMappingURL=list.css.map */
