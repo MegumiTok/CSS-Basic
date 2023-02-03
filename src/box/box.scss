@@ -22,24 +22,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F5F5F5;
 }
 
 /************************************
 ** 1個目
 ************************************/
 .container_one {
+    margin: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80vh;
-    height: 50vh;
     font-family: "Fredoka", sans-serif;
 }
 
 .window {
 
-    width: 30vw;
+    width: 500px;
     background-color: #fbf8cc;
     position: relative;
     display: inline-block;
@@ -113,4 +113,50 @@ body {
     margin: 20px;
     text-align: justify;
     font-size: 1.2em;
+}
+
+/************************************
+** 2個目
+************************************/
+ul {
+    list-style-type: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.container_two {
+
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fredoka", sans-serif;
+    min-width: 800px;
+    line-height: 1.7;
+
+    li {
+        border-bottom: 1px solid #eee;
+        padding: .3em 1em .3em 1em;
+
+    }
+
+    .title {
+        background-color: #6DBFB1;
+        line-height: 38px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        box-sizing: border-box;
+    }
+}
+
+.box_two {
+    box-shadow: 0px 3px 6px #0000001a;
+    background-color: #fff;
+
 }
